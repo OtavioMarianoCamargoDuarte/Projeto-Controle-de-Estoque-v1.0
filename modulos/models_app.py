@@ -30,8 +30,8 @@ def main():
             nome = str(input('Nome do produto: '))
             quantidade = int(input('Quantidade: '))
             preco = float(input('Valor do produto: '))
-            adcionarProduto(cursor, nome, quantidade, preco)
             print(f'Produto {nome} adcionado com sucesso!')
+            adcionarProduto(cursor, nome, quantidade, preco)
             conn.commit()
 
         elif opc == 2:
@@ -50,7 +50,6 @@ def main():
             novo_nome = input('Novo Produto: ')
             nova_quantidade = int(input('Nova quantidade: '))
             novo_preco = float(input('Novo preço: R$'))
-
             modificarProduto(cursor, novo_nome, nova_quantidade,novo_preco, id_produto)
             print('Produto atualizado com sucesso!')
             conn.commit()
